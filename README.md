@@ -34,7 +34,8 @@ Install required Python packages:
 
 Start the Flask server:
   ```bash
-  python app.py
+  python recursions_and_factoring.py
+  ```
 
 ### Usage
 On the frontend web interface, enter the grammar in BNF format. For example:
