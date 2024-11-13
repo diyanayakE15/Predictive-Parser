@@ -25,13 +25,15 @@ This project implements a predictive parser based on a given context-free gramma
 ### Backend Setup
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/diyanayakE15/Predictive-Parser
    cd python_backend
 
 Install required Python packages:
+  ```python
   pip install Flask
 
 Start the Flask server:
+  ```bash
   python app.py
 
 ### Usage

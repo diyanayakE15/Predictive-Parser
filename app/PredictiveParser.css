@@ -1,0 +1,173 @@
+.predictive-parser {
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa); /* Soft gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+  padding: 30px; /* Increased padding for more space */
+  transition: all 0.3s ease;
+  max-width: 800px;
+  margin: auto; /* Center the container */
+}
+
+.predictive-parser h2 {
+  color: #333;
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 15px; /* Added margin below heading */
+  text-align: center; /* Center the heading */
+}
+
+textarea,
+input {
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 4px;
+  padding: 12px; /* Slightly larger padding */
+  font-size: 16px;
+  margin-top: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow on focus */
+  width: calc(100% - 26px); /* Ensure full width accounting for padding */
+}
+
+textarea:focus,
+input:focus {
+  border-color: #0056b3; /* Darker blue on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Subtle glow effect */
+}
+
+button {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Animation styles */
+.animation-container {
+  position: relative;
+  overflow: hidden;
+  height: 30px; /* Adjust height as needed */
+  margin-top: 20px; /* Added margin above animation */
+}
+
+.animated-input {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Existing flying animations */
+@keyframes flyIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.input-buffer {
+  display: inline-block;
+  animation: flyIn 1s forwards; /* Customize the duration for fly in */
+}
+
+.stack {
+  display: inline-block;
+  animation: flyIn 1s forwards; /* Customize the duration for fly in */
+}
+
+/* New bounce animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Custom classes for letters to animate bounce in/out */
+.bounce-in {
+  display: inline-block;
+  animation: bounceIn 0.5s forwards; /* Customize the duration for bounce in */
+}
+
+.bounce-out {
+  display: inline-block;
+  animation: bounceOut 0.5s forwards; /* Customize the duration for bounce out */
+}
+
+/* One-by-one row animation */
+@keyframes rowAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row {
+  animation: rowAnimation 0.5s forwards; /* Customize the duration for row animation */
+}
+
+/* Other styles */
+form {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px; /* Added margin on top of table */
+  background-color: #ffffff; /* White background for the table */
+}
+
+th {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient header */
+  color: white;
+  padding: 12px; /* Increased padding */
+}
+
+td {
+  padding: 12px; /* Increased padding */
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Add hover effect for table rows */
+tbody tr:hover {
+  background-color: #f1f1f1; /* Light background on row hover */
+}
